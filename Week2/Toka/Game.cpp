@@ -59,6 +59,6 @@ void Game::play()
 
 void Game::printGameResult()
 {
-    std::cout << "Your guess is right = " << randomNumber;
-    std::cout << " with " << numOfGuesses << " guesses" << std::endl;
+    std::cout << "Your guess is right = " << randomNumber << std::endl;
+    std::cout << "You guessed the right answer = " << randomNumber << " with " << numOfGuesses << " guesses" << std::endl;
 }

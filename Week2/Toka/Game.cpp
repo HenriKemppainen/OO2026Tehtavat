@@ -22,7 +22,8 @@ Game::Game(int m)
 
 Game::~Game()
 {
-    numOfGuesses = 0;
+    std::cout << "GAME DESTRUCTOR: object cleared from stack memory" << std::endl;
+
 }
 
 
@@ -58,6 +59,6 @@ void Game::play()
 
 void Game::printGameResult()
 {
-    std::cout << "Your guess is right " << randomNumber;
+    std::cout << "Your guess is right = " << randomNumber;
     std::cout << " with " << numOfGuesses << " guesses" << std::endl;
 }

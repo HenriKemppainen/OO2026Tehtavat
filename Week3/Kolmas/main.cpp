@@ -24,7 +24,7 @@ int main()
     std::cout << kokki.getName() << " with ";
     std::cin >> soup;
     std::cin.ignore(1000, '\n');
-    std::cout << "items can make soup " << kokki.makeSalad(soup) << " portions" << std::endl;
+    std::cout << "items can make soup " << kokki.makeSoup(soup) << " portions" << std::endl;
 
     string kokki2;
     cout << "Syota italialaisen kokin nimi: ";

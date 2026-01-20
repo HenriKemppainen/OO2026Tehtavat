@@ -11,7 +11,7 @@ int main()
 
     Asiakas sirpa("Sirpa",200);
     sirpa.tallennus(400);
-    sirpa.tiliSiirto(200, pena);
+    sirpa.tiliSiirto(250, pena);
 
     sirpa.showSaldo();
     pena.showSaldo();

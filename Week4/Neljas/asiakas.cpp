@@ -32,13 +32,14 @@ bool Asiakas::luotonNosto(double nosto){
 }
 
 bool Asiakas::tiliSiirto(double summa, Asiakas &vastaanottaja)
-{   cout << getNimi() << " siirtaa " << summa << " " << vastaanottaja.getNimi() << ":lle" << endl;
+{
+    if (summa > 0 && kayttotili.withdraw(summa)) {
+    cout << getNimi() << " siirtaa " << summa << " " << vastaanottaja.getNimi() << ":lle" << endl;
     cout << getNimi() << " ";
 
-    kayttotili.withdraw(summa);
     cout << vastaanottaja.getNimi() << " ";
     vastaanottaja.tallennus(summa);
     return true;
     }
-   // return false;
-//}
+    return false;
+}

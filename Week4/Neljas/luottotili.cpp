@@ -1,7 +1,7 @@
 #include "luottotili.h"
 
 
-Luottotili::Luottotili(string tilinomistaja, double luotto)
+Luottotili::Luottotili(string tilinomistaja, double luotto) : Pankkitili(tilinomistaja)
 {
     luottoRaja = -luotto;
     cout << "Luottotili luotu " << tilinomistaja << ":lle, luottoraja "

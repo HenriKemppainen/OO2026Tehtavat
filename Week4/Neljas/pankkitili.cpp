@@ -2,7 +2,7 @@
 
 Pankkitili::Pankkitili(string nimi) {
     omistaja = nimi;
-    cout << "Pankkitili luotu " << omistaja << ":lle" << endl;
+
 }
 
 
@@ -13,6 +13,7 @@ double Pankkitili::getBalance(){
 bool Pankkitili::deposit(double talletus){
     if (talletus >= 0){
             saldo += talletus;
+            cout  << "Pankkitili: talletus: " << talletus << " tehty" << endl;
             return true;
     }
     else {
@@ -22,6 +23,7 @@ bool Pankkitili::deposit(double talletus){
 bool Pankkitili::withdraw(double nosto){
     if(saldo-nosto >= 0 && nosto >= 0){
         saldo -= nosto;
+        cout << "Pankkitili: nosto: " << nosto << " tehty" << endl;
         return true;
     }
     else {

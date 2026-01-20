@@ -4,8 +4,8 @@
 Luottotili::Luottotili(string tilinomistaja, double luotto) : Pankkitili(tilinomistaja)
 {
     luottoRaja = -luotto;
-    cout << "Luottotili luotu " << tilinomistaja << ":lle, luottoraja "
-         << luotto << endl;
+    saldo = luotto;
+
 }
 
 
@@ -13,6 +13,7 @@ Luottotili::Luottotili(string tilinomistaja, double luotto) : Pankkitili(tilinom
 bool Luottotili::deposit(double talletus){
     if (talletus >= 0 && saldo + talletus <= 0){
         saldo += talletus;
+        cout  << "Luottotili: talletus: " << talletus << " tehty" << endl;
         return true;
     }
     else {
@@ -22,6 +23,7 @@ bool Luottotili::deposit(double talletus){
 bool Luottotili::withdraw(double nosto){
     if(saldo-nosto >= luottoRaja && nosto >= 0){
         saldo -= nosto;
+        cout << "Luottotili: nosto: " << nosto << " tehty, luottoa jaljella " << saldo << endl;
         return true;
     }
     else {

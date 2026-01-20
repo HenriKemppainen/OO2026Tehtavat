@@ -4,6 +4,17 @@ using namespace std;
 
 int main()
 {
-    Asiakas Asiakas("Pena", 500);
+    Asiakas pena("Pena", 500);
+    pena.luotonNosto(360);
+    pena.luotonMaksu(100);
+    pena.showSaldo();
+
+    Asiakas sirpa("Sirpa",200);
+    sirpa.tallennus(400);
+    sirpa.tiliSiirto(200, pena);
+
+    sirpa.showSaldo();
+    pena.showSaldo();
+
     return 0;
 }
